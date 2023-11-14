@@ -1,0 +1,7 @@
+flex tokenizador.exe
+gcc lex.yy.c -L "C:\Program Files (x86)\GnuWin32\lib" -lfl -o tokenizador
+para compilar :)
+
+para correrlo con los ejemplos
+ejemplos/ejemplo1.c > ejemplos/ejemplo1.txt
+ejemplos/ejemplo2.c > ejemplos/ejemplo2.txt
