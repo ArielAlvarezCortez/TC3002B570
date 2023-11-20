@@ -1,0 +1,17 @@
+name: C
+
+on:
+  pull_request:
+    branches: [ "workflow" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Generate flex executable file
+      run: |
+        cd tokenizacion
+        lex tokens.l
+      shell: bash
