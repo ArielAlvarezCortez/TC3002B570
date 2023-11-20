@@ -14,4 +14,5 @@ jobs:
       run: |
         cd tokenizacion
         lex tokens.l
+        gcc lex.yy.c -lfl -o tokenizador
       shell: bash
