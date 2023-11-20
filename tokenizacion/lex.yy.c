@@ -261,6 +261,9 @@ static void yy_flex_free YY_PROTO(( void * ));
 
 #define YY_AT_BOL() (yy_current_buffer->yy_at_bol)
 
+
+#define yywrap() 1
+#define YY_SKIP_YYWRAP
 typedef unsigned char YY_CHAR;
 FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;
 typedef int yy_state_type;
@@ -479,9 +482,9 @@ static char *yy_last_accepting_cpos;
 char *yytext;
 #line 1 "tokens.l"
 #define INITIAL 0
-#line 2 "tokens.l"
+#line 3 "tokens.l"
 #include <stdio.h>
-#line 485 "lex.yy.c"
+#line 488 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -632,10 +635,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 4 "tokens.l"
+#line 5 "tokens.l"
 
 
-#line 639 "lex.yy.c"
+#line 642 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -720,85 +723,85 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 6 "tokens.l"
+#line 7 "tokens.l"
 printf("keyword ");
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 8 "tokens.l"
+#line 9 "tokens.l"
 printf("identifier ");
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 10 "tokens.l"
+#line 11 "tokens.l"
 printf("Assignment ");
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 12 "tokens.l"
+#line 13 "tokens.l"
 printf("Arithmetic ");
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 14 "tokens.l"
+#line 15 "tokens.l"
 printf("Relational ");
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 16 "tokens.l"
+#line 17 "tokens.l"
 printf("Logical ");
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 18 "tokens.l"
+#line 19 "tokens.l"
 printf("Bitwise ");
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 20 "tokens.l"
+#line 21 "tokens.l"
 printf("Ternary ");
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 22 "tokens.l"
+#line 23 "tokens.l"
 printf("Special ");
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 24 "tokens.l"
+#line 25 "tokens.l"
 printf("String ");
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 26 "tokens.l"
+#line 27 "tokens.l"
 printf("Float ");
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 28 "tokens.l"
+#line 29 "tokens.l"
 printf("Integer ");
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 30 "tokens.l"
+#line 31 "tokens.l"
 printf("Char ");
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 32 "tokens.l"
+#line 33 "tokens.l"
 /* comentario */;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 33 "tokens.l"
+#line 34 "tokens.l"
 /* espacio */;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 34 "tokens.l"
+#line 35 "tokens.l"
 ECHO;
 	YY_BREAK
-#line 802 "lex.yy.c"
+#line 805 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1684,7 +1687,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 34 "tokens.l"
+#line 35 "tokens.l"
 
 
 int main(int argc, char *argv[])
