@@ -14,5 +14,6 @@ jobs:
       run: |
         cd tokenizacion
         lex tokens.l
+        sudo apt-get install libfl-dev
         gcc lex.yy.c -L "/usr/lib/x86_64-linux-gnu/"-lfl -o tokenizador
       shell: bash
