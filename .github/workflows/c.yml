@@ -13,7 +13,6 @@ jobs:
     - name: Generate flex executable file
       run: |
         cd tokenizacion
-        echo ola
         lex tokens.l
         gcc lex.yy.c -L "/usr/lib/x86_64-linux-gnu/"-lfl -o tokenizador
         mv ejemplos/ejemplo1.c  ejemplos/ejemplo1.txt
