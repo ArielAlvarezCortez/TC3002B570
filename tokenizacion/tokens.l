@@ -30,8 +30,13 @@ auto|break|case|char|const|continue|default|do|double|else|enum|extern|float|for
 
 '[ -~]+' printf("Char ");
 
+[\n]+   printf("EOL ");
+
+[;]+   printf("Comma ");
+
 \/\/[ -~]*              /* comentario */;
 [ \t]+                  /* espacio */;
+
 %%
 
 int main(int argc, char *argv[])
