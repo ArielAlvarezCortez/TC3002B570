@@ -13,7 +13,7 @@ jobs:
     - name: Generate flex executable file
       run: |
         cd tokenizacion
-        sudo apt-get install flex
-        lex tokens.l
+        sudo apt-get install bison
+        flex tokens.l
         gcc lex.yy.c -lfl -o tokenizador
       shell: bash
