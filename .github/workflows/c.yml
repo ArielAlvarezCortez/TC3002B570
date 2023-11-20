@@ -18,6 +18,6 @@ jobs:
         mv ejemplos/ejemplo1.c  ejemplos/ejemplo1.txt
         mv ejemplos/ejemplo2.c  ejemplos/ejemplo2.txt
         ls
-        RESULT=$(./tokenizador ejemplo/ejemplo1.txt)
+        RESULT=$(./tokenizador ejemplos/ejemplo1.txt)
         echo "${RESULT}"
       shell: bash
