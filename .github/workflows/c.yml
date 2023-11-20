@@ -17,5 +17,7 @@ jobs:
         gcc lex.yy.c -L "/usr/lib/x86_64-linux-gnu/"-lfl -o tokenizador
         mv ejemplos/ejemplo1.c  ejemplos/ejemplo1.txt
         mv ejemplos/ejemplo2.c  ejemplos/ejemplo2.txt
-        ./tokenizador ejemplo/ejemplo1.txt
+        ls
+        RESULT=$(./tokenizador ejemplo/ejemplo1.txt)
+        echo "${RESULT}"
       shell: bash
