@@ -14,15 +14,14 @@ def index():
 @app.route("/tokenizacion/", methods=["POST"])
 def tokenizar():
     if  request.method == "POST":
-
-        json = request.json
-        texto = json["texto"]
+        request.get_data()
+        texto = request.data.decode('utf-8')
 
         with open("Output.txt", "w") as text_file:
             text_file.write(texto)
 
 #        os.system()
-        result = subprocess.check_output('./tokenizador.exe ejemplos/ejemplo1.c', text=True)
+        result = subprocess.check_output('./tokenizador.exe Output.txt', text=True)
         print(result)
         return jsonify(result)
     else:
