@@ -15,4 +15,7 @@ jobs:
         cd tokenizacion
         lex tokens.l
         gcc lex.yy.c -L "/usr/lib/x86_64-linux-gnu/"-lfl -o tokenizador
+        ejemplos/ejemplo1.c > ejemplos/ejemplo1.txt
+        ejemplos/ejemplo2.c > ejemplos/ejemplo2.txt
+        ./tokenizador ejemplo1.txt
       shell: bash
