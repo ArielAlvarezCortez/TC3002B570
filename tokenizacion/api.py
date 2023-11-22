@@ -3,8 +3,6 @@ import os
 from flask import jsonify, request, Flask
 import subprocess
 
-
-
 app = Flask(__name__)
 
 @app.route("/")

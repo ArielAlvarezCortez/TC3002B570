@@ -15,9 +15,32 @@ jobs:
         cd tokenizacion
         lex tokens.l
         gcc lex.yy.c -L "/usr/lib/x86_64-linux-gnu/"-lfl -o tokenizador
-        mv ejemplos/ejemplo1.c  ejemplos/ejemplo1.txt
-        mv ejemplos/ejemplo2.c  ejemplos/ejemplo2.txt
-        ls
-        RESULT=$(./tokenizador ejemplos/ejemplo1.txt)
-        echo "${RESULT}"
+
       shell: bash
+    - name: docker build
+      run: docker build -t ${{secrets.DOCKER_USER}}/api:latest .
+    - name: show images
+      run: docker images
+    - name: docker login
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: docker Push to hub.docker.com
+      run: docker push ${{secrets.DOCKER_USER}}/api:latest
+
+    - name: show deployment.yaml
+      run: cat deployment.yaml
+    - uses: okteto/context@2.7.0
+      with:
+        token: ${{secrets.OKTETO_TOKEN }}
+
+    - name: Deploy and Wait
+      uses: okteto/actions/deploy@v1
+      env:
+        KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
+      with:
+        namespace: ${{secrets.OKTETO_NAMESPACE }}
+        manifest: manifests/k8s.yml
+        tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:latest
