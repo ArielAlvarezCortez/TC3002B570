@@ -52,4 +52,4 @@ jobs:
       with:
         namespace: api
         manifest: manifests/k8s.yml
-        tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:latest
+        tag: ${{ secrets.DOCKER_USERNAME }}/api:latest
