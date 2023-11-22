@@ -41,7 +41,7 @@ jobs:
       env:
         KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
       with:
-        namespace: api
+        namespace: arielalvarezcortez
         manifest: deployment.yaml
         tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:latest
 
@@ -50,6 +50,6 @@ jobs:
       env:
         KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
       with:
-        namespace: api
+        namespace: arielalvarezcortez
         manifest: deployment.yaml
         tag: ${{ secrets.DOCKER_USERNAME }}/api:latest
