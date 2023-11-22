@@ -5,7 +5,7 @@ COPY ./requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir --upgrade -r ./requirements.txt
 
 
-COPY ./tokenizacion/tokenizador .
+COPY ./tokenizacion/tokenizador.out .
 RUN ls
 
 COPY ./tokenizacion/api.py .
