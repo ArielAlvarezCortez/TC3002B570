@@ -14,7 +14,7 @@ jobs:
       run: |
         cd tokenizacion
         lex tokens.l
-        gcc lex.yy.c -L "/usr/lib/x86_64-linux-gnu/"-lfl -o tokenizador
+        gcc lex.yy.c -L "/usr/lib/x86_64-linux-gnu/"-lfl -o tokenizador.out
 
       shell: bash
     - name: docker build
