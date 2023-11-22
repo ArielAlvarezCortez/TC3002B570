@@ -6,6 +6,8 @@ RUN pip install --no-cache-dir --upgrade -r ./requirements.txt
 
 
 COPY ./tokenizacion/tokenizador .
+RUN ls
+
 COPY ./tokenizacion/api.py .
 
 EXPOSE  80
