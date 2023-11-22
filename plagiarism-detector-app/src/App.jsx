@@ -7,6 +7,7 @@ import Subnavbar from './components/Subnavbar';
 
 const App = () => {
 
+  
   const [code1, setCode1] = useState(null);
   const [code2, setCode2] = useState(null);
 
@@ -71,7 +72,7 @@ const App = () => {
 
       console.log("Resultado de la segunda API:", resultFromSecondAPI);
 
-      
+
 
     } catch (error) {
       console.error("Error al analizar el código:", error);
