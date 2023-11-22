@@ -35,7 +35,7 @@ const CodeCard = () => {
     <>
       <div className="card" style={{
         height: '90%',
-        width: '90%',
+        width: '98%',
         borderStyle: '2px solid',
         borderColor: 'black'
       }}>
@@ -48,9 +48,15 @@ const CodeCard = () => {
           {!name ? <>Nombre del archivo</> : name}
         </div>
 
-        <div className="card-body d-flex flex-column justify-content-center">
+        <div className="card-body d-flex flex-column justify-content-center align-items-center">
 
-          {code && <a onClick={resetFileUpload} className="btn btn-danger" style={{ margin: '10px' }}>Cambiar</a>}
+          {code && 
+              <a onClick={resetFileUpload} className="btn btn-danger" 
+                style={{ margin: '10px', width:'90%' }}
+              >
+                Cambiar
+            </a>
+          }
 
           {!code && <FileUploader onFileUpload={handleFileUpload} />}
           {code && <CodeViewer code={code} />}

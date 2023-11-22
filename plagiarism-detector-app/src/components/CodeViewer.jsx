@@ -5,13 +5,14 @@ const CodeViewer = ({ code }) => {
     <div style={{
       margin:'10px',
       padding: '10px',
-      border: '1px solid #ccc',
+      border: '1px solid',
       borderRadius: '4px',
       overflowWrap:'break-word',
       overflow:'auto',
-      maxHeight:'600px',
-      maxWidth:'800px',
-      fontFamily: 'Roboto Mono, monospace'
+      maxHeight:'550px',
+      width:'100%',
+      maxWidth:'850px',
+      fontFamily: 'Roboto Mono, monospace',
     }}>
       <pre>{code}</pre>
     </div>

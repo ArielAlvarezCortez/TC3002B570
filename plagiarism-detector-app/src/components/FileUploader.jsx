@@ -12,14 +12,13 @@ const FileUploader = ({ onFileUpload }) => {
 
   return (
     <div {...getRootProps()} style={{
-      margin:'10px',
       border: '2px dashed #6874e8',
       borderRadius: '4px',
-      padding: '10px',
+      width:'90%',
       display:'flex',
       justifyContent:'center',
       alignItems:'center',
-      height:'90%', 
+      height:'70%', 
       cursor:'pointer'
     }}>
       <input {...getInputProps()} />
