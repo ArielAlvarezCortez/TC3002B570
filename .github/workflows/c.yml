@@ -51,5 +51,5 @@ jobs:
         KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
       with:
         namespace: api
-        manifest: manifests/k8s.yml
+        manifest: deployment.yaml
         tag: ${{ secrets.DOCKER_USERNAME }}/api:latest
