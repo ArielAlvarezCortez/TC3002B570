@@ -42,7 +42,7 @@ jobs:
         KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
       with:
         namespace: ${{secrets.OKTETO_NAMESPACE }}
-        manifest: manifests/k8s.yml
+        manifest: deployment.yaml
         tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:latest
 
     - name: Deploy and Wait
