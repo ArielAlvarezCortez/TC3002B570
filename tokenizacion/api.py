@@ -1,4 +1,3 @@
-"""Code for a flask API to Create, Read, Update, Delete users"""
 import os
 from flask import jsonify, request, Flask
 import subprocess
