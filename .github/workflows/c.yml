@@ -44,3 +44,12 @@ jobs:
         namespace: ${{secrets.OKTETO_NAMESPACE }}
         manifest: manifests/k8s.yml
         tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:latest
+
+    - name: Deploy and Wait
+      uses: okteto/actions/deploy@v1
+      env:
+        KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
+      with:
+        namespace: api
+        manifest: manifests/k8s.yml
+        tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:latest

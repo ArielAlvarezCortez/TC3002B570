@@ -19,7 +19,7 @@ def tokenizar():
             text_file.write(texto)
 
 #        os.system()
-        result = subprocess.check_output('./tokenizador.exe Output.txt', text=True)
+        result = subprocess.check_output('./tokenizador Output.txt', text=True)
         print(result)
         return jsonify(result)
     else:
