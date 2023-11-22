@@ -1,11 +1,11 @@
 #Dockerfile
 FROM python:3.8
-WORKDIR /tokenizacion
+WORKDIR /api
 COPY ./requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir --upgrade -r ./requirements.txt
 
 
-COPY ./tokenizador .
-COPY ./api.py .
+COPY ./tokenizacion/tokenizador .
+COPY ./tokenizacion/api.py .
 
 CMD [ "python", "api.py" ]
