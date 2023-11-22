@@ -3,6 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import MySVGIcon from '../assets/Upload-rafiki.svg'
 
 const FileUploader = ({ onFileUpload }) => {
+  
   const onDrop = useCallback((acceptedFiles) => {
     const file = acceptedFiles[0];
     onFileUpload(file);

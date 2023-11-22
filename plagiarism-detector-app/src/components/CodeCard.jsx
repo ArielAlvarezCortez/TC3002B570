@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import FileUploader from './FileUploader';
 import CodeViewer from './CodeViewer';
 
-const CodeCard = () => {
+const CodeCard = ({code, setCode}) => {
 
-  const [code, setCode] = useState(null);
   const [name, setName] = useState(null);
-
 
 
   const handleFileUpload = (file) => {

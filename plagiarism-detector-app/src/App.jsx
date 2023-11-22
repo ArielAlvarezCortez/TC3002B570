@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CodeCard from './components/CodeCard';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 const App = () => {
+
+  const [code1, setCode1] = useState(null);
+  const [code2, setCode2] = useState(null);
+
+  const analize = () => {
+
+    console.log("Codigo1:",code1);
+    console.log("Codigo2:",code2);
+
+  }
 
   return (
     <>
@@ -69,7 +79,8 @@ const App = () => {
 
             }}>
               {/* Botón de análisis que irá en la mitad derecha */}
-              <button className='btn btn-success'
+              <button 
+                className='btn btn-success'
                 style={{
                   height: '8vh',
                   width: '25vw',
@@ -77,6 +88,7 @@ const App = () => {
                   borderRadius: '10px',
                   boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
                 }}
+                onClick={analize}
               >
                 <i className="bi bi-file-diff" style={{marginRight:'8px', fontSize:'1.5rem'}}/> Analizar
                 
@@ -100,7 +112,7 @@ const App = () => {
             style={{ height: '100%', width: '100%', }}
           >
 
-            <CodeCard />
+            <CodeCard code={code1} setCode={setCode1} />
 
           </div>
 
@@ -108,7 +120,8 @@ const App = () => {
             style={{ height: '100%', width: '100%' }}
           >
 
-            <CodeCard />
+            <CodeCard code={code2} setCode={setCode2} />
+
 
           </div>
 
