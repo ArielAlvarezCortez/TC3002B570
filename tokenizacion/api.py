@@ -21,7 +21,7 @@ def tokenizar():
         print(result)
 
         response = jsonify(result)
-        response.headers.add('Access-Control-Allow-Origin', '*')  # Ajusta a los orígenes permitidos en producción
+        response.headers.add('Access-Control-Allow-Origin', '*')  
         response.headers.add('Access-Control-Allow-Methods', 'POST')
 
         return response

@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import FileUploader from './FileUploader';
 import CodeViewer from './CodeViewer';
 
-const CodeCard = ({code, setCode}) => {
+const CodeCard = ({code, setCode, name, setName}) => {
 
-  const [name, setName] = useState(null);
 
 
   const handleFileUpload = (file) => {
@@ -25,7 +24,7 @@ const CodeCard = ({code, setCode}) => {
 
   const resetFileUpload = () => {
     setCode(null);
-    setName(null);
+    setName('Nombre del archivo');
   }
 
 
@@ -43,7 +42,7 @@ const CodeCard = ({code, setCode}) => {
           borderColor: 'black',
           fontSize: '1.2rem'
         }}>
-          {!name ? <>Nombre del archivo</> : name}
+          {name}
         </div>
 
         <div className="card-body d-flex flex-column justify-content-center align-items-center">
