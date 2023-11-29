@@ -6,8 +6,6 @@ import Subnavbar from './components/Subnavbar';
 import Swal from 'sweetalert2';
 
 
-
-
 const App = () => {
 
 
@@ -19,8 +17,6 @@ const App = () => {
 
   const analize = async () => {
 
-    // console.log("Codigo1:", code1);
-    // console.log("Codigo2:", code2);
 
     const apiUrl1 = "http://127.0.0.1:8080/tokenizacion/"; // Reemplaza con la URL de tu primera API
     const apiUrl2 = "https://bigbirdsimilarity-service-elmike1712.cloud.okteto.net/calculate_similarity"; // Reemplaza con la URL de tu segunda API
@@ -63,9 +59,7 @@ const App = () => {
       console.log("Resultado tokenizacion codigo1:", (result1));
       console.log("Resultado tokenizacion codigo2:", (result2));
 
-      
-
-      
+    
       // const queryParams = new URLSearchParams({
       //   text1: JSON.stringify(result1),
       //   text2: JSON.stringify(result2),
@@ -77,7 +71,6 @@ const App = () => {
 
       // const responseFromSecondAPI = await fetch(apiUrl2WithParams, {
       //   method: 'POST',
-      //   mode:'no-cors',
       //   headers: {
       //     'Content-Type': 'application/json', // Ajusta el tipo de contenido según lo que espera la segunda API
       //   }
@@ -109,7 +102,6 @@ const App = () => {
           setSetName2('Nombre del archivo');
         }
       });
-
 
     } catch (error) {
       console.error("Error al analizar el código:", error);
